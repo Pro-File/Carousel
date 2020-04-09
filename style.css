@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html{
+    background:  #A2ECEE;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: #A2ECEE;
+}
+
+
+ /* Slider */
+
+
+.slider {
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0 0 2px hsla(0,0%,0%,.2),
+                0 3px 1px hsla(0,0%,100%,.75),
+                0 -1px 1px 2px hsla(0,0%,0%,.1);
+    height: 18.75em;
+    left: 50%;
+    margin: -9.875em -13em;
+    padding: .5em;
+    position: absolute;
+    top: 50%;
+    width: 25em;
+    z-index: 1;
+}
+
+/* Frame */
+
+.slider:before {
+    background-color: #22130c;
+    bottom: -2.5em;
+    box-shadow: inset 0 1px 1px 1px hsla(0,0%,100%,.2),
+                inset 0 -2px 1px hsla(0,0%,0%,.4),
+                0 5px 50px hsla(0,0%,0%,.25),
+                0 20px 20px -15px hsla(0,0%,0%,.2),
+                0 30px 20px -15px hsla(0,0%,0%,.15),
+                0 40px 20px -15px hsla(0,0%,0%,.1);
+    content: '';
+    left: -2.5em;
+    position: absolute;
+    right: -2.5em;
+    top: -2.5em;
+    z-index: -1;
+}
+
+/* Mat */
+
+.slider:after {
+    background-color: #fff5e5;
+    box-shadow: 0 2px 1px hsla(0,0%,100%,.2),
+                0 -1px 1px 1px hsla(0,0%,0%,.4),
+                inset 0 2px 3px 1px hsla(0,0%,0%,.2),
+                inset 0 4px 3px 1px hsla(0,0%,0%,.2),
+                inset 0 6px 3px 1px hsla(0,0%,0%,.1);
+    content: '';
+    position: absolute;
+    left: -1.5em;
+    bottom: -1.5em;
+    right: -1.5em;
+    top: -1.5em;
+    z-index: -1;
+}
+
+/* Slides */
+
+.slider>.screen {
+    width: 100%;
+    height: 100%;
+    background: #fff5e5;
+    box-shadow: 0px 10px 10px 2px rgba(0, 0, 0, 0.301);
+
+}
+.fade{
+    animation: fade 2s ease-in-out;
+}
+@keyframes fade{
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+.screen>i{
+    font-size: 30px;
+    color: #ffff;
+    z-index: 2;
+}
+.screen>#left{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+}
+.screen>#right{
+    position: absolute;
+    top: 50%;
+    left: 92%;
+}
+.image{
+    width: 97%;
+    height: 97%;
+    position: absolute;
+}
+.image1{
+    background-image: url("./1st.png");
+    background-size: 100% 100%, cover;
+    background-repeat: no-repeat;
+}
+.image2{
+    background: url("./bird.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%, cover;
+}
+.image3{
+    background: url("./chip.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%, cover;
+}
+.image4{
+    background: url("./jump2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%, cover;
+}
+.image5{
+    background: url("./shot_.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%, cover;
+    background-position : center;
+}
+@media only screen and (max-width: 600px){
+    
+    .image{
+        width: 97%;
+        height: 97%;
+    }
+    .slider {
+        height: 13em;
+        left: 60%;
+        margin: -9.875em -13em;
+        padding: .5em;
+        top: 60%;
+        width: 18em;
+    }
+}
+@media only screen and (max-width: 500px){
+    .container{
+        width: 100vw;
+        height: 80vh;
+        background: #A2ECEE;
+    }
+    .image{
+        width: 95%;
+        height: 95%;
+    }
+    .slider {
+        height: 11em;
+        left: 70%;
+        margin: -9.875em -13em;
+        padding: .5em;
+        top: 50%;
+        width: 15em;
+    }
+    .screen>i{
+        font-size: 20px;
+    }
+    .screen>#left{
+        position: absolute;
+        top: 50%;
+        left: 10%;
+    }
+    .screen>#right{
+        position: absolute;
+        top: 50%;
+        left: 88%;
+    }
+}
+@media only screen and (max-width: 380px){
+    
+    .image{
+        width: 95%;
+        height: 95%;
+    }
+    .slider {
+        height: 9em;
+        left: 80%;
+        margin: -9.875em -13em;
+        padding: .5em;
+        top: 60%;
+        width: 12em;
+    }
+
+    .screen>#left{
+        position: absolute;
+        top: 50%;
+        left: 10%;
+    }
+    .screen>#right{
+        position: absolute;
+        top: 50%;
+        left: 85%;
+    }
+}
+@media only screen and (max-width: 380px){
+    
+    .image{
+        width: 93%;
+        height: 93%;
+    }
+    .slider:before {
+    box-shadow: none;
+    }
+    .slider {
+        height: 8em;
+        left: 89%;
+        top: 65%;
+        width: 10em;
+    }
+    .slider>.screen {
+
+        background: #fff5e5;
+        box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.301);
+    }
+    .screen>#right{
+        position: absolute;
+        top: 50%;
+        left: 86%;
+    }
+}
